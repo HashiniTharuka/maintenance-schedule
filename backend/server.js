@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import adminRoutes from "./routes/adminRoutes.js";
 import adScheduleRoutes from "./routes/adScheduleRoutes.js";
 import adUploadRoutes from "./routes/adUploadRoutes.js";
+import batteryRoutes from "./routes/batteryRoutes.js";
 
 
 dotenv.config();
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use("/api/admins", adminRoutes);
 app.use("/api/ad-schedules", adScheduleRoutes);
 app.use("/api/adUploads", adUploadRoutes);
+app.use("/api/batteries", batteryRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
