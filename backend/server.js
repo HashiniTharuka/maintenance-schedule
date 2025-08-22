@@ -16,6 +16,11 @@ import lea2Routes from "./routes/lea2Routes.js";
 import manjulaRoutes from "./routes/manjulaRoutes.js";
 import manoraRoutes from "./routes/manoraRoutes.js";
 import messurementsRoutes from "./routes/messurementsRoutes.js";
+import msanDistributionRoutes from "./routes/msanDistributionRoutes.js";
+import nodeRoutes from "./routes/nodeRoutes.js";
+import ntwengRoutes from "./routes/ntwengRoutes.js";
+import platformRoutes from "./routes/platformRoutes.js";
+import platformUserRoutes from "./routes/platformUserRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -37,6 +42,11 @@ app.use("/api/lea2", lea2Routes);
 app.use("/api/manjula", manjulaRoutes);
 app.use("/api/manora", manoraRoutes);
 app.use("/api/messurements", messurementsRoutes);
+app.use("/api/msan-distribution", msanDistributionRoutes);
+app.use("/api/nodes", nodeRoutes);
+app.use("/api/ntweng", ntwengRoutes);
+app.use("/api/platforms", platformRoutes);
+app.use("/api/platform-users", platformUserRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
