@@ -22,6 +22,31 @@ import ntwengRoutes from "./routes/ntwengRoutes.js";
 import platformRoutes from "./routes/platformRoutes.js";
 import platformUserRoutes from "./routes/platformUserRoutes.js";
 import regionRoutes from "./routes/regionRoutes.js";
+import scheduleRoutes from "./routes/scheduleRoutes.js";
+import scheduleNewRoutes from "./routes/scheduleNewRoutes.js";
+import scheduleOldRoutes from "./routes/scheduleOldRoutes.js";
+import schedule2024Routes from "./routes/schedule2024Routes.js";
+import schedule20242025Routes from "./routes/schedule20242025Routes.js";
+import schedulebackupRoutes from "./routes/schedulebackupRoutes.js";
+import sheet1Routes from "./routes/sheet1Routes.js";
+import slbnDistributionRoutes from "./routes/slbnDistributionRoutes.js";
+import taskRoutes from "./routes/taskRoutes.js";
+import taskDetailsRoutes from "./routes/taskDetailsRoutes.js";
+import taskDetailsOldRoutes from "./routes/taskDetailsOldRoutes.js";
+import tempTwMtcRoutes from "./routes/tempTwMtcRoutes.js";
+import testRoutes from "./routes/testRoutes.js";
+import towerRoutes from "./routes/towerRoutes.js";
+import towerDetailsRoutes from "./routes/towerDetailsRoutes.js";
+import towerDistributionRoutes from "./routes/towerDistributionRoutes.js";
+import towerDistribution2Routes from "./routes/towerDistribution2Routes.js";
+import towerDistributionOldRoutes from "./routes/towerDistributionOldRoutes.js";
+import uploadRoutes from "./routes/uploadRoutes.js";
+import uploadOldRoutes from "./routes/uploadOldRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import vpnDistributionRoutes from "./routes/vpnDistributionRoutes.js";
+import zteCArdsRoutes from "./routes/zteCArdsRoutes.js";
+
+
 
 dotenv.config();
 const app = express();
@@ -49,6 +74,30 @@ app.use("/api/ntweng", ntwengRoutes);
 app.use("/api/platforms", platformRoutes);
 app.use("/api/platform-users", platformUserRoutes);
 app.use("/api/regions", regionRoutes);
+app.use("/api/schedules", scheduleRoutes);
+app.use("/api/schedules-new", scheduleNewRoutes);
+app.use("/api/schedules-old", scheduleOldRoutes);
+app.use("/api/schedules-2024", schedule2024Routes);
+app.use("/api/schedules-2024-2025", schedule20242025Routes);
+app.use("/api/schedules-backup", schedulebackupRoutes);
+app.use("/api/sheet1", sheet1Routes);
+app.use("/api/slbn-distribution", slbnDistributionRoutes);
+app.use("/api/tasks", taskRoutes);
+app.use("/api/task-details", taskDetailsRoutes);
+app.use("/api/task-details-old", taskDetailsOldRoutes);
+app.use("/api/temp-tw-mtc", tempTwMtcRoutes);
+app.use("/api/test", testRoutes);
+app.use("/api/towers", towerRoutes);
+app.use("/api/tower-details", towerDetailsRoutes);
+app.use("/api/tower-distribution", towerDistributionRoutes);
+app.use("/api/tower-distribution2", towerDistribution2Routes);
+app.use("/api/tower-distribution-old", towerDistributionOldRoutes);
+app.use("/api/uploads", uploadRoutes);
+app.use("/api/uploads-old", uploadOldRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/vpn-distribution", vpnDistributionRoutes);
+app.use("/api/zte-cards", zteCArdsRoutes);
+
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {

@@ -1,0 +1,15 @@
+import mongoose from "mongoose";
+
+const uploadSchema = new mongoose.Schema({
+  id: { type: Number },
+  node_Name: { type: String, maxlength: 255 },
+  start_Date: { type: Date },
+  end_Date: { type: Date },
+  platform: { type: String, maxlength: 255 },
+  status: { type: String, maxlength: 255 },
+  status_datetime: { type: String, maxlength: 255 },
+  updated_on: { type: Date },
+  updated_by: { type: String, maxlength: 255 }
+}, { timestamps: true });
+
+export default mongoose.model("Upload", uploadSchema);
