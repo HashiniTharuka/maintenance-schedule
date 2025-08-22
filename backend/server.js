@@ -21,6 +21,7 @@ import nodeRoutes from "./routes/nodeRoutes.js";
 import ntwengRoutes from "./routes/ntwengRoutes.js";
 import platformRoutes from "./routes/platformRoutes.js";
 import platformUserRoutes from "./routes/platformUserRoutes.js";
+import regionRoutes from "./routes/regionRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -47,6 +48,7 @@ app.use("/api/nodes", nodeRoutes);
 app.use("/api/ntweng", ntwengRoutes);
 app.use("/api/platforms", platformRoutes);
 app.use("/api/platform-users", platformUserRoutes);
+app.use("/api/regions", regionRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
